@@ -56,7 +56,7 @@ const aliceGrades = studentGrades.grades["Alice"];
 
 
 // Exercise Two
-// Store a set of words in an array and display the contents both forward and backward.
+// Store a set of words in a array and display the contents both forward and backward.
 const reversing = (words) => {
   let forwardIteration = [];
   let backwardIteration = [];
@@ -73,7 +73,9 @@ const reversing = (words) => {
   console.log(backwardIteration);
 }
 
-// reversing(["Welcome", "everyone"])
+// reversing(["Welcome", "everyone"]) 
+// [ 'Welcome', 'everyone' ] 
+// [ 'everyone', 'Welcome' ]
 
 
 // Exercise Three
@@ -117,7 +119,8 @@ class MonthTemp {
     this.dataStore = [];
     for (let i = 0; i < 4; i++) {
       this.dataStore.push([]);
-    }
+    } 
+    // initializing the dataStore property of the WeekTemps class to a two-dimensional array with four rows to represent 4 weeks in a month
   }
 
   add(temp, week) {
@@ -156,14 +159,6 @@ class MonthTemp {
   }
 }
 
-/*  (let i = 0; i < 4; i++) {
-      this.dataStore.push([]); 
-    } 
-This code for is used to initialize the dataStore property of the WeekTemps class to a two-dimensional array with four rows.
-
-Without this code, the dataStore property would be an empty array. This would cause problems when we try to add temperatures to the array, because we would not be able to specify which week the temperature belongs to.
-
-By initializing the dataStore property to a two-dimensional array with four rows, we can ensure that each week has its own row in the array. This makes it easy to add temperatures to the correct week and to calculate the weekly average temperature. */
 
 const monthTemp = new MonthTemp();
 
@@ -178,14 +173,28 @@ monthTemp.add(84, 3);
 monthTemp.add(73, 4);
 
 
-// console.log(monthTemp);
-// const week3 = monthTemp.weeklyAverage(3)
-// console.log(week3); // 84.50
 
-// const monthAverage = monthTemp.monthlyAverage()
-// const weekAverage = monthTemp.allWeeksAverages()
+// console.log(monthTemp.dataStore); // [ [ 70, 75 ], [ 80, 82, 82 ], [ 85, 84 ], [ 73 ] ]
+
+const week3Average = monthTemp.weeklyAverage(3)
+const monthAverage = monthTemp.monthlyAverage()
+const weekAverage = monthTemp.allWeeksAverages()
+// console.log(week3Average); // 84.50
 // console.log(monthAverage); // 78.88
 // console.log(weekAverage); // [ '72.50', '81.33', '84.50', '73.00' ]
+
+
+
+
+
+/*  (let i = 0; i < 4; i++) {
+      this.dataStore.push([]); 
+    } 
+This code for is used to initialize the dataStore property of the WeekTemps class to a two-dimensional array with four rows.
+
+Without this code, the dataStore property would be an empty array. This would cause problems when we try to add temperatures to the array, because we would not be able to specify which week the temperature belongs to.
+
+By initializing the dataStore property to a two-dimensional array with four rows, we can ensure that each week has its own row in the array. This makes it easy to add temperatures to the correct week and to calculate the weekly average temperature. */
 
 
 // Exercise Four 
@@ -215,4 +224,4 @@ newWord.add('a');
 newWord.add('l');
 newWord.add('l');
 
-console.log(newWord.word());
+console.log(newWord.word()); // a ball
