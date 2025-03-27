@@ -1,3 +1,6 @@
+// An array is a data structure that can hold a collection of values
+// They are resizable, you do not have declare the size
+
 // We can verify that an object is an array by calling the Array.isArray() function, like this:
 var number = 3;
 var arr = [7,4,1776];

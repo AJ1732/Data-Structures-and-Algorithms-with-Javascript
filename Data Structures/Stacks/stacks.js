@@ -1,6 +1,12 @@
 // Functions of Stack includes 
 // Push, Pop, Peek, length, Clear
+// This is a sequential collection of element that follows the 
+// principle of Last In First Out (LIFO)
 
+// Stack Usage
+// Browser history tracking
+// Undo operation when typing
+// Call stack in javascript runtime
 
 class Stack {
   constructor() {
